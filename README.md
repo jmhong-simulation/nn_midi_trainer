@@ -18,8 +18,8 @@ Meeting
 - 기고문 문서 작성 
 
 #1
-Piano player
-Midi reading
+Piano player (https://github.com/Calysto/chuck)
+Midi reading (MIDO or IOMIDI)
 
 #2
 Data structure for training
@@ -34,26 +34,24 @@ Test
 #5
 Review
 
-
-
-
 Outline
-
 
 Introduction (Previous Work)
 
 summarize each reference in 2-3 sentences.
 
 Learning 
-Deep Jazz https://github.com/jisungk/deepjazz/blob/master/generator.py 
-Magenta
+Deep Jazz https://github.com/jisungk/deepjazz/blob/master/generator.py 유선우
+Magenta 조동헌
 
 Rule based
-Representative 1-3
+Representative 1-3 
+조동헌
 
 Piano player
 
 Midi reading
+정종현
 
 Data structure for training
 
