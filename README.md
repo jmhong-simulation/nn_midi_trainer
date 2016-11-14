@@ -18,7 +18,7 @@ Meeting
 - 기고문 문서 작성 
 
 #1
-Piano player (https://github.com/Calysto/chuck)
+Piano player (https://github.com/Calysto/chuck, pygame)
 Midi reading (MIDO or IOMIDI)
 
 #2
