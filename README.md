@@ -18,8 +18,8 @@ Meeting
 - 기고문 문서 작성 
 
 #1
-Piano player (https://github.com/Calysto/chuck, pygame)
-Midi reading (MIDO or IOMIDI)
+Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav 
+Midi reading (MIDO in pygame) 정종현
 
 #2
 Data structure for training
