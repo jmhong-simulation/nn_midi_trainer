@@ -19,10 +19,12 @@ Meeting
 
 #1
 Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav 
+
 Midi reading (MIDO in pygame) 정종현
 
 #2
 Data structure for training
+
 Tensorflow NN (FCNN)
 
 #3
@@ -41,11 +43,15 @@ Introduction (Previous Work)
 summarize each reference in 2-3 sentences.
 
 Learning 
+
 Deep Jazz https://github.com/jisungk/deepjazz/blob/master/generator.py 유선우
+
 Magenta 조동헌
 
 Rule based
+
 Representative 1-3 
+
 조동헌
 
 Piano player
