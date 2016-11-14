@@ -20,7 +20,7 @@ Meeting
 #1
 Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav 
 
-Midi reading (MIDO in pygame) 정종현
+Midi reading (MIDO in pygame) 정종현, 유선우
 
 #2
 Data structure for training
