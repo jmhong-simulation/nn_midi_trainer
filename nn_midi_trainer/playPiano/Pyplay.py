@@ -8,8 +8,8 @@ import os
 cwd = os.getcwd() 
 
 # open multiple waves
-wf1 = wave.open(cwd+"piano88\Piano 030.wav", 'rb')
-wf2 = wave.open(cwd+"piano88\Piano 001.wav",'rb')
+wf1 = wave.open(cwd+"\piano88\Piano 030.wav", 'rb')
+wf2 = wave.open(cwd+"\piano88\Piano 001.wav",'rb')
 p = pyaudio.PyAudio()
 
 # attach wf2 to wf1 channel
