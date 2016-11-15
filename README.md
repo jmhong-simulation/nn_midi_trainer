@@ -1,5 +1,13 @@
 # nn_midi_trainer
 
+​	Midi trainer & generator with Neural Network.
+
+## Build Environment
+
+- Python 2.7 ( Anaconda Package )
+
+  ​
+
 ##목표
 
 - 1차: 현재 C++ 버전을 Python Tensorflow  버전으로 변환. (현재는 1CPU에서 밤새 훈련이 필요했기 때문에 GPU 사용시 속도 향상을 기대)
@@ -85,4 +93,6 @@ test 완료. package 개발 중
 - Future work
 - Github link
 
-정종현, 조동헌, 유선우, 김준기, 홍정모
+## Contributors
+
+정종현, [조동헌](https://github.com/davinnovation), 유선우, 김준기, 홍정모
