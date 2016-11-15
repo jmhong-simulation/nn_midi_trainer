@@ -38,36 +38,50 @@ Review
 
 Outline
 
-Introduction (Previous Work)
+#### Introduction (Previous Work)
 
 summarize each reference in 2-3 sentences.
 
-Learning 
+#### Learning Base Music Generator
 
 Deep Jazz https://github.com/jisungk/deepjazz/blob/master/generator.py 유선우
 
-Magenta 조동헌
+[Magenta from Google](https://magenta.tensorflow.org/welcome-to-magenta)
 
-Rule based
+- Magenta는 Google Brain Team가 제공하는 머신러닝을 이용한 art & music 생성기. 현재는 music generator만 제공하고 있으며 recurrent neural network 모델[Basic+LSTM, Lookback, Attention]을 통해 학습되고 있음. 초기 Initial 음을 model에 주면 그에 기반하여 음악을 생성. [ppt](https://drive.google.com/drive/folders/0B8z5oUpB2DysbFNEOWxfVDh5VW8)
 
-Representative 1-3 
+[music generate with rnn](http://davinnovation.github.io/old_/midi_generate_rnn.html) 
 
-조동헌
+- RNN모델을로 개발된 music 생성기. n-gram 언어 모델을 기반으로 음악을 학습함. 초기 Initial 음을 주지 않고 처음부터 음악을 생성.
 
-Piano player
+#### Rule Base Music Generator
 
-Midi reading
+[WolframTones](http://tones.wolfram.com/)
+
+- 공대의 친구 WolframAlpha 제작사에서 만든 음악 생성기로 각 장르에 맞는 규칙을 통해 음악을 생성
+
+[Jukedeck](https://www.jukedeck.com/)
+- 미국 스타트업으로 장르에 기반한 음악을 생성. WolframTone보다 간편한 옵션 설정으로 생성됨. 
+
+#### Piano player
+
+test 완료. package 개발 중
+
+#### Midi reading
+
 정종현
 
-Data structure for training
+#### Data structure for training
 
-Tensorflow NN (FCNN)
+#### Tensorflow NN (FCNN)
 
-Results and discussion
+#### Results and discussion
+
 - moon light, epoch vs accuracy
 - additional...
 
-Conclusion
+#### Conclusion
+
 - Future work
 - Github link
 
