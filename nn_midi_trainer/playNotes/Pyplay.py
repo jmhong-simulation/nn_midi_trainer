@@ -4,38 +4,48 @@ import time
 import numpy
 import os
 
-# get current directory
-cwd = os.getcwd() 
+# playmusic function
+# @input type(codes) == array && 0 <= each data <= 88
+def playmusic(codes=[]):
 
-# open multiple waves
-wf1 = wave.open(cwd+"\piano88\Piano 030.wav", 'rb')
-wf2 = wave.open(cwd+"\piano88\Piano 001.wav",'rb')
-p = pyaudio.PyAudio()
+   cwd = os.getcwd()
 
-# attach wf2 to wf1 channel
-def callback(in_data, frame_count, time_info, status):
-    data1 = wf1.readframes(frame_count)
-    data2 = wf2.readframes(frame_count)
-    decodeddata1 = numpy.fromstring(data1, numpy.int16)
-    decodeddata2 = numpy.fromstring(data2, numpy.int16)
-    data = (decodeddata1 * 0.5 + decodeddata2 * 0.5).astype(numpy.int16)
-    return (data, pyaudio.paContinue)
+   wfs = []
 
-# open stream
-stream = p.open(format=p.get_format_from_width(wf1.getsampwidth()),
-                channels=wf1.getnchannels(),
-                rate=wf1.getframerate(),
-                output=True,
-                stream_callback=callback)
+   for code in codes:
+       wfs.append(wave.open(cwd+"\piano88\Piano 0"+str(code)+".wav",'rb'))
 
-# play stream
-stream.start_stream()
+   p = pyaudio.PyAudio()
 
-while stream.is_active():
-    time.sleep(0.1)
+   def callback(in_data, frame_count, time_info, status):
+       datas = []
+       decodeddatas = []
+       for wf in wfs:
+           datas.append(wf.readframes(frame_count))
+       for data in datas:
+           decodeddatas.append(numpy.fromstring(data,numpy.int16))
+       data = (sum(decodeddatas) * 0.5).astype(numpy.int16)
+       return (data,pyaudio.paContinue)
 
-stream.stop_stream()
-stream.close()
-wf1.close()
+   stream = p.open(format=p.get_format_from_width(wfs[0].getsampwidth()),
+                   channels=wfs[0].getnchannels(),
+                   rate=wfs[0].getframerate(),
+                   output=True,
+                   stream_callback=callback)
 
-p.terminate()
+   stream.start_stream()
+
+   while stream.is_active():
+       time.sleep(0)
+   stream.close()
+   wfs[0].close()
+
+   p.terminate()
+
+   return True
+
+#######HOW TO USE : main##########
+if __name__ == '__main__':
+    playmusic([57])    # press one key
+    playmusic([57,59]) # press two key
+    playmusic([57,60,63]) # press three key
