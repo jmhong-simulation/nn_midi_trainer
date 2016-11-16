@@ -4,48 +4,38 @@ import time
 import numpy
 import os
 
-# playmusic function
-# @input type(codes) == array && 0 <= each data <= 88
-def playmusic(codes=[]):
+# get current directory
+cwd = os.getcwd() 
 
-   cwd = os.getcwd()
+# open multiple waves
+wf1 = wave.open(cwd+"\piano88\Piano 030.wav", 'rb')
+wf2 = wave.open(cwd+"\piano88\Piano 001.wav",'rb')
+p = pyaudio.PyAudio()
 
-   wfs = []
+# attach wf2 to wf1 channel
+def callback(in_data, frame_count, time_info, status):
+    data1 = wf1.readframes(frame_count)
+    data2 = wf2.readframes(frame_count)
+    decodeddata1 = numpy.fromstring(data1, numpy.int16)
+    decodeddata2 = numpy.fromstring(data2, numpy.int16)
+    data = (decodeddata1 * 0.5 + decodeddata2 * 0.5).astype(numpy.int16)
+    return (data, pyaudio.paContinue)
 
-   for code in codes:
-       wfs.append(wave.open(cwd+"\piano88\Piano 0"+str(code)+".wav",'rb'))
+# open stream
+stream = p.open(format=p.get_format_from_width(wf1.getsampwidth()),
+                channels=wf1.getnchannels(),
+                rate=wf1.getframerate(),
+                output=True,
+                stream_callback=callback)
 
-   p = pyaudio.PyAudio()
+# play stream
+stream.start_stream()
 
-   def callback(in_data, frame_count, time_info, status):
-       datas = []
-       decodeddatas = []
-       for wf in wfs:
-           datas.append(wf.readframes(frame_count))
-       for data in datas:
-           decodeddatas.append(numpy.fromstring(data,numpy.int16))
-       data = (sum(decodeddatas) * 0.5).astype(numpy.int16)
-       return (data,pyaudio.paContinue)
+while stream.is_active():
+    time.sleep(0.1)
 
-   stream = p.open(format=p.get_format_from_width(wfs[0].getsampwidth()),
-                   channels=wfs[0].getnchannels(),
-                   rate=wfs[0].getframerate(),
-                   output=True,
-                   stream_callback=callback)
+stream.stop_stream()
+stream.close()
+wf1.close()
 
-   stream.start_stream()
-
-   while stream.is_active():
-       time.sleep(0)
-   stream.close()
-   wfs[0].close()
-
-   p.terminate()
-
-   return True
-
-#######HOW TO USE : main##########
-if __name__ == '__main__':
-    playmusic([57])    # press one key
-    playmusic([57,59]) # press two key
-    playmusic([57,60,63]) # press three key
+p.terminate()
