@@ -52,7 +52,9 @@ summarize each reference in 2-3 sentences.
 
 #### Learning Base Music Generator
 
-Deep Jazz https://github.com/jisungk/deepjazz/blob/master/generator.py 유선우
+[Deep Jazz](https://github.com/jisungk/deepjazz/blob/master/generator.py)
+
+- Jazz음악을 작곡해주는 프로그램. 두개의 LSTM layer를 통해 학습함. Deep Learning 라이브러리인 Keras와 Theano를 이용하여 만들어짐. bpm을 사전에 설정.
 
 [Magenta from Google](https://magenta.tensorflow.org/welcome-to-magenta)
 
