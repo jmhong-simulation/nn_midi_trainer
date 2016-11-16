@@ -1,8 +1,13 @@
+import pyaudio
+import wave
+import time
+import numpy
+import os
 from mido import MidiFile
 
 from playNotes import Pyplay
 
-mid = MidiFile('Merry Go Round of Life (piano solo).mid')
+mid = MidiFile('\sampleMidi\Merry Go Round of Life (piano solo).mid')
 note = []
 timing = 0
 for i in range(0, 88):
