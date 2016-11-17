@@ -95,6 +95,10 @@ test 완료. package 개발 중
 - Future work
 - Github link
 
+## Related Paper
+- [music generation with wave learning paper](http://www.gitxiv.com/posts/WEoQCj8hxHz6vPxe6/gruv-algorithmic-music-generation-using-recurrent-neural)
+- [KDD 2016 rap lyrics generator paper](http://www.kdd.org/kdd2016/papers/files/adf0399-malmiA.pdf)
+
 ## Contributors
 
 정종현, [조동헌](https://github.com/davinnovation), 유선우, 김준기, 홍정모
