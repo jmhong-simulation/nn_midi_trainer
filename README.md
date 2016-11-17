@@ -25,8 +25,8 @@
 - 코드 정리 및 깃헙 공개 (readme파일에 참여자 이름과 이메일 주소 넣는 것 잊지 마세요)
 - 기고문 문서 작성 
 
-###1
-Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav 
+###1 20161117
+Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav, multiple channel, sync-async
 
 Midi reading (MIDO in pygame) 정종현, 유선우
 
