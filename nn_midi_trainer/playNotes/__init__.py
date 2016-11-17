@@ -13,7 +13,15 @@ class playNotes():
         self._wfs = []
 
         for code in codes:
-            self._wfs.append(wave.open(cwd + "\piano88\Piano 0" + str(code) + ".wav", 'rb'))
+            c = ""
+            if code > 0 and code < 10:
+                c = "0"+str(code)
+            elif code < 89:
+                c = str(code)
+            else:
+                print("out of code index")
+                exit()
+            self._wfs.append(wave.open(cwd + "\piano88\Piano 0" + c + ".wav", 'rb'))
 
 
     def play(self,onset=None):
@@ -57,7 +65,7 @@ class playNotes():
 # example
 if __name__ == '__main__':
     playNotes.playNotes(codes=[57]).play()
-    time.sleep(0.5)
+    time.sleep(0.3)
     playNotes.playNotes(codes=[57, 59]).play()
-    time.sleep(0.5)
+    time.sleep(0.3)
     playNotes.playNotes(codes=[57, 60, 63]).play()
