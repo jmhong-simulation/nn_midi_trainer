@@ -1,3 +1,10 @@
+"""
+    Coded by Davi Innovation
+    davinnovation at gmail.com
+
+    playNotes
+"""
+
 import pyaudio
 import os
 import time
@@ -51,21 +58,35 @@ class playNotes():
                 decodeddatas.append(numpy.fromstring(data,numpy.int16))
             data = (sum(decodeddatas) * 0.5).astype(numpy.int16)
             return (data,pyaudio.paContinue)
+
         self._stream = get_PyAudio.open(format=get_PyAudio.get_format_from_width(self._wfs[0].getsampwidth()),
 										channels=self._wfs[0].getnchannels(),
 										rate=self._wfs[0].getframerate(),
 										output=True,
 										stream_callback=callback)
+
         while self._stream.is_active():
-			time.sleep(0.1)
+            time.sleep(0.1)
         self._stream.stop_stream()
         self._stream.close()
 
 
 # example
 if __name__ == '__main__':
-    playNotes.playNotes(codes=[57]).play()
+    playNotes(codes=[57]).play()
     time.sleep(0.3)
-    playNotes.playNotes(codes=[57, 59]).play()
+    playNotes(codes=[57, 59]).play()
     time.sleep(0.3)
-    playNotes.playNotes(codes=[57, 60, 63]).play()
+    playNotes(codes=[57, 60, 63]).play()
+    time.sleep(0.3)
+    playNotes(codes=[57, 60, 63,66]).play()
+    time.sleep(0.3)
+    playNotes(codes=[57, 60, 63,66,69]).play()
+    time.sleep(0.3)
+    playNotes(codes=[57, 60, 63,66,69,72]).play()
+    time.sleep(0.3)
+    playNotes(codes=[57, 60, 63,66,69,72,75]).play()
+    time.sleep(0.3)
+    playNotes(codes=[57, 60, 63,66,69,72,75,78]).play()
+    time.sleep(0.3)
+    playNotes(codes=[57, 60, 63,66,69,72,75,78,81]).play()

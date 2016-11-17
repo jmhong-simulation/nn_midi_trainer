@@ -1,6 +1,6 @@
 import time
 import os
-import playNotes
+from playNotes import playNotes
 from mido import MidiFile
 
 
@@ -17,7 +17,7 @@ for message in track:
     if 144 <= event[0] < 160:  # 0x90~0x9F note_on
         note[event[1] - 20] = 1  # filenumber of Note C4 is 40 and number of Evete[1] C4 is 60. These diffrence is 20
         print event[1]
-        playNotes.playNotes(codes=[1,event[1] - 20]).play()
+        playNotes(codes=[event[1] - 20]).play()
         time.sleep(0.3)
     elif 128 <= event[0] < 144:  # 0x80~0x8F note_off
         note[event[1] - 20] = 0
