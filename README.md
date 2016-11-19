@@ -79,7 +79,7 @@ test 완료. package 개발 중
 
 #### Midi reading
 
-정종현
+test 완료 Input데이터로 전환중
 
 #### Data structure for training
 
