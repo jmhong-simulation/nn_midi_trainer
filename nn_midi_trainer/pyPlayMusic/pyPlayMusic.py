@@ -73,8 +73,14 @@ class playNotes():
 
 # example
 if __name__ == '__main__':
-    playNotes(codes=[57]).play()
+
+    playNotes(codes=[14,26,33]).play()
+    time.sleep(0.5)
+    playNotes(codes=[38]).play()
+    time.sleep(0.5)
+    playNotes(codes=[42]).play()
     time.sleep(0.3)
+    """
     playNotes(codes=[57, 59]).play()
     time.sleep(0.3)
     playNotes(codes=[57, 60, 63]).play()
@@ -90,3 +96,4 @@ if __name__ == '__main__':
     playNotes(codes=[57, 60, 63,66,69,72,75,78]).play()
     time.sleep(0.3)
     playNotes(codes=[57, 60, 63,66,69,72,75,78,81]).play()
+    """
