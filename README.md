@@ -26,14 +26,14 @@
 - 기고문 문서 작성 
 
 ###1 20161117
-Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav, multiple channel, sync-async
+Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav, multiple channel, sync-async [complete - need enhancement with synthysizer]
 
-Midi reading (MIDO in pygame) 정종현, 유선우
+Midi reading (MIDO in pygame) 정종현, 유선우, cdh [complete]
 
 ###2
-Data structure for training
+Data structure for training - cdh [complete]
 
-Tensorflow NN (FCNN)
+Tensorflow NN (FCNN) - cdh [ complete but need enhancement ]
 
 ###3
 Test
