@@ -60,7 +60,7 @@ def makeMidi_nn(playlist = [], length = 1):
     count = 0
 
     # play = [ notes ]
-    for i in range(len(playlist)):
+    for i in range(len(playlist)-1):
         play = playlist[i]
         one = _makeHOT(play)
 
@@ -68,10 +68,9 @@ def makeMidi_nn(playlist = [], length = 1):
         count += 1
 
         if count >= length:
-            print count
+
             _y = _makeHOT(playlist[i+1])
-            print X
-            print _y
+
             setX.append(X)
             set_y.append(_y)
             X = []
