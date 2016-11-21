@@ -28,15 +28,16 @@
 ###1 20161117
 Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav, multiple channel, sync-async [complete - need enhancement with synthysizer]
 
-Midi reading (MIDO in pygame) 정종현, 유선우, cdh [complete]
+Midi reading (MIDO in pygame) 정종현, 유선우, CDH [complete]
 
-###2
-Data structure for training - cdh [complete]
+###2 20161121
 
-Tensorflow NN (FCNN) - cdh [ complete but need enhancement ]
+Data structure for training - CDH [complete]
+Tensorflow NN (FCNN) - CDH [ complete but need enhancement ]
 
 ###3
-Test
+
+Model improvement, harmony, Spontaneous play.
 
 ###4
 Test
@@ -75,15 +76,19 @@ summarize each reference in 2-3 sentences.
 
 #### Piano player
 
-test 완료. package 개발 중
+test 완료. package 개발 중 -> explanation
 
 #### Midi reading
 
-test 완료 Input데이터로 전환중
+test 완료 Input데이터로 전환중 -> exp
 
 #### Data structure for training
 
+exp
+
 #### Tensorflow NN (FCNN)
+
+activation, multi-hidden layer, ...
 
 #### Results and discussion
 
