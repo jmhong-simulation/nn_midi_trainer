@@ -28,7 +28,7 @@
 ###1 20161117
 Piano player (pygame wav play, https://github.com/Calysto/chuck) 조동헌 -> play one wav, multiple channel, sync-async [complete - need enhancement with synthysizer]
 
-Midi reading (MIDO in pygame) 정종현, 유선우, CDH [complete]
+Midi reading (MIDO) 정종현, 유선우, CDH [complete]
 
 ###2 20161121
 
