@@ -97,7 +97,7 @@ activation, multi-hidden layer, ...
 
 #### Conclusion
 
-- Future work
+- Future work: training data format and note duration
 - Github link
 
 ## Related Paper
