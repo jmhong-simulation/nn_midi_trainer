@@ -8,19 +8,18 @@ class data_set_nn():
         self._dataX_length = len(setX)
 
     def get_next_batch(self,size=100):
+        # _batch_start_index
         self._batch_index += size
 
-        batch_xs = []
-        batch_ys = []
+        batch_xs = []  # x_input_batch_return
+        batch_ys = []  # y_target_batch_return
 
-        for i in range(self._batch_index, self._batch_index+size):
-            array = []
+        for i in range(self._batch_index, self._batch_index + size):
+            array = [] # history x num_notes (24 x 88)
             for j in range(len(self._dataX[i%self._dataX_length])):
                 for q in self._dataX[i%self._dataX_length][j]:
                     array.append(q)
             batch_xs.append(array)
-
-
 
         array = []
         for i in range(self._batch_index, self._batch_index+size):
