@@ -73,8 +73,10 @@ def makeMidi_nn(playlist = [], length = 1):
 
             setX.append(X)
             set_y.append(_y)
+            preX = X[1:]
             X = []
-            count = 0
+            for i in preX:
+                X.append(i)
 
     return setX, set_y
 

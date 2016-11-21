@@ -7,7 +7,6 @@ import data_set_nn
 
 from pyPlayMusic import pyPlayMusic
 
-# for windows "\sampleMidi\moonlight.mid"
 playlist = readmidi_nn.readmidi("/sampleMidi/moonlight.mid")
 """
 for play in playlist:
@@ -16,18 +15,17 @@ for play in playlist:
     time.sleep(160/480.)
 """
 x,y = readmidi_nn.makeMidi_nn(playlist,24)
-print(len(x[0][0]))
-print(len(y[0]))
 
 batch = data_set_nn.data_set_nn(x,y)
 
-# batch test
-batchX, batchY = batch.get_next_batch(size=40)
-print batchX
-print batchY
-batchX, batchY = batch.get_next_batch(size=33)
-print batchX
-print batchY
-batchX, batchY = batch.get_next_batch(size=33)
-print batchX
-print batchY
+batchX, batchY = batch.get_next_batch(size=100)
+print len(x[0])
+print len(y[0])
+for i in batchY:
+    a = []
+    for j in range(len(i)):
+        if i[j] == 1:
+            a.append(j)
+    print a
+    pyPlayMusic.playNotes(a).play()
+    time.sleep(160 / 480.)
