@@ -36,24 +36,30 @@ import data_set_nn
 playlist = readmidi_nn.readmidi("/sampleMidi/moonlight.mid")
 
 #TODO: rename xx->x_input, yy->y_target
-xx,yy = readmidi_nn.makeMidi_nn(playlist,24)
+#xx,yy = readmidi_nn.makeMidi_nn(playlist,24)
+x_input,y_target = readmidi_nn.makeMidi_nn(playlist,24)
 
 #TODO: batch_feeder
-batch = data_set_nn.data_set_nn(xx,yy)
+#batch = data_set_nn.data_set_nn(xx,yy)
+batch_feeder = data_set_nn.date_set_nn(x_input,y_target)
 
 for i in range(10000):
     """
     batch_xs, batch_ys = mnist.train.next_batch(100)
     """
     #rename x_input_batch, y_target_batch
-    batch_xs, batch_ys = batch.get_next_batch(size=100)
+    #batch_xs, batch_ys = batch.get_next_batch(size=100)
+    x_input_batch, y_target_batch = batch_feeder.get_next_batch(size=100)
 
-    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
+    #sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
+    sess.run(train_step, feed_dict={x: x_input_batch, y_: y_target_batch})
 
     # test output
     if i % 20 == 0:
-        batch_xs, batch_ys = batch.get_next_batch(size=1)
-        _y = sess.run(y,feed_dict={x:batch_xs})
+        #batch_xs, batch_ys = batch.get_next_batch(size=1)
+        x_input_batch, y_target_batch = batch_feeder.get_next_batch(size=1)
+        #_y = sess.run(y,feed_dict={x:batch_xs})
+        _y = sess.run(y, feed_dict={x: x_input_batch})
 
         count = 0
         for i in _y:
