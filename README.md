@@ -82,7 +82,9 @@ test 완료. package 개발 중 -> explanation
 
 #### Midi reading
 
-test 완료 Input데이터로 전환중 -> exp
+미디파일을 읽어들이기 위해 mido 모듈을 사용했다.
+readmidi() : 파일 전체를 읽으면서 note와 시작시간을 알아내어 eventlist에 저장한다. eventlist 에서 간격을 나눈 시간내에 note가 있을때 playlist에 추가한다. 그리고 playlist를 반환한다.
+makeMidi_nn(playlist,24) : hisotory를 24로 설정하고 한 batch당 88key*24history  2차원 배열을 생성한다. 
 
 #### Data structure for training
 
