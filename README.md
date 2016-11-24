@@ -6,7 +6,9 @@
 
 - Python 2.7 ( Anaconda Package )
 
-  ​
+## Article Link
+
+- [google docs](https://docs.google.com/document/d/11RYTlprImsKv4xz-PPzZHm5vkQJ9mWkFil5AaqyKkAE/edit?usp=shari)
 
 ##목표
 
