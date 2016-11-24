@@ -15,6 +15,8 @@ def readmidi(filepath = ""):
     print (mid.ticks_per_beat)
     for i, track in enumerate(mid.tracks):
         print('Track {} : {} '.format(i, track.name))
+        if len(track) > 100:
+            break
 
     for message in track:
         timing += message.time
