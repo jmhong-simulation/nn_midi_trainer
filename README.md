@@ -39,12 +39,15 @@ Tensorflow NN (FCNN) - CDH [ complete but need enhancement ]
 
 ###3
 
-Model improvement, harmony, Spontaneous play.
+Model improvement, harmony - CDH [complete], Spontaneous play
 
 ###4
+
 Test
+Initial 24 lengths from midi => generating recursive
 
 ###5
+
 Review
 
 Outline
