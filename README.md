@@ -113,4 +113,4 @@ activation, multi-hidden layer, ...
 
 ## Contributors
 
-정종현, [조동헌](https://github.com/davinnovation), [유선우](sunwoolyu@naver.com), 김준기, 홍정모
+정종현, [조동헌](https://github.com/davinnovation), 유선우, 김준기, 홍정모
