@@ -10,6 +10,7 @@ x_input,y_target = readmidi_nn.makeMidi_nn(playlist,24)
 batch_feeder = data_set_nn.data_set_nn(x_input,y_target)
 length = len(playlist)
 
+"""
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 """
